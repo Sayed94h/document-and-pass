@@ -3,7 +3,7 @@
 <!-- END TITLE -->
 
 <!-- BEGIN TOC -->
-> 7/3/2020, 3:35:30 PM
+> 7/10/2020, 1:24:47 PM
 
 - [0-hello-world](#0-hello-world)
 - [1-remove-from-array](#1-remove-from-array)
@@ -39,23 +39,16 @@ A very simple function, it greets whatever you tell it to
 
 **Example**  
 ```js
-const greeting = hello('World');
-console.log(greeting); // 'Hello, World!'
+const greeting = hello('World');console.log(greeting); // 'Hello, World!'
 ```
 **Test Report**
 ```
 Started
-.F..F.
+......
 
-Failures:
-1) Hello says hello world
-.    Expected '' to equal 'Hello, World!'..
 
-2) Hello says hello toys
-.    Expected '' to equal 'Hello, toys!'..
-
-2 specs, 2 failures
-Finished in 0.009 seconds
+2 specs, 0 failures
+Finished in 0.047 seconds
 
 ```
 
@@ -98,7 +91,7 @@ Failures:
 .    Expected undefined to equal [ 1, 2 ]..
 
 7 specs, 7 failures
-Finished in 0.008 seconds
+Finished in 0.083 seconds
 
 ```
 
@@ -111,37 +104,29 @@ Finished in 0.008 seconds
 
 <a name="repeatString"></a>
 
-## repeatString()
+## repeatString(str, repeatTimes) ⇒ <code>string</code>
+This function is going to repeat the 'given string as its parameter' number of times
 
+
+**Returns**: <code>string</code> - repeated string  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>string</code> | : this string is going to be repeated depend on the parameter 'repeatTimes' |
+| repeatTimes | <code>number</code> | repeat time or number of times that the string has to be repeated |
+
+**Example**  
+```js
+const test = repeatString('FakeNews', 2);console.log(test); // FakeNewsFakeNews
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F.
+.....................
 
-Failures:
-1) repeatString repeats the string
-.    Expected undefined to equal 'heyheyhey'..
 
-2) repeatString repeats the string many times
-.    Expected undefined to equal 'heyheyheyheyheyheyheyheyheyhey'..
-
-3) repeatString repeats the string 1 times
-.    Expected undefined to equal 'hey'..
-
-4) repeatString repeats the string 0 times
-.    Expected undefined to equal ''..
-
-5) repeatString returns ERROR with negative numbers
-.    Expected undefined to equal 'ERROR'..
-
-6) repeatString repeats the string a random amount of times
-.    TypeError: Cannot read property 'match' of undefined.
-
-7) repeatString works with blank strings
-.    Expected undefined to equal ''..
-
-7 specs, 7 failures
-Finished in 0.007 seconds
+7 specs, 0 failures
+Finished in 0.078 seconds
 
 ```
 
@@ -175,7 +160,7 @@ Failures:
 .    Expected undefined to equal ''..
 
 4 specs, 4 failures
-Finished in 0.003 seconds
+Finished in 0.063 seconds
 
 ```
 
@@ -215,7 +200,7 @@ Failures:
 .    Expected undefined to equal 'ERROR'..
 
 6 specs, 6 failures
-Finished in 0.005 seconds
+Finished in 0.078 seconds
 
 ```
 
@@ -228,43 +213,28 @@ Finished in 0.005 seconds
 
 <a name="fibonacci"></a>
 
-## fibonacci()
+## fibonacci(lastDigit) ⇒ <code>number</code>
+Find or calculate the fibonacci number
 
+
+**Returns**: <code>number</code> - calcFibonacci: it is the result of the calculation  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| lastDigit | <code>string</code> | this is the number that you want to find the Fibonacci number from |
+
+**Example**  
+```js
+const test = fibonacci(6);console.log(test); // 8
+```
 **Test Report**
 ```
 Started
-.F..F..F..F..F..F..F..F..F.
+...........................
 
-Failures:
-1) fibonacci works
-.    Expected undefined to equal 3..
 
-2) fibonacci works
-.    Expected undefined to equal 8..
-
-3) fibonacci works
-.    Expected undefined to equal 55..
-
-4) fibonacci works
-.    Expected undefined to equal 610..
-
-5) fibonacci works
-.    Expected undefined to equal 75025..
-
-6) fibonacci doesn't accept negatives
-.    Expected undefined to equal 'OOPS'..
-
-7) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-8) fibonacci DOES accept strings
-.    Expected undefined to equal 1..
-
-9) fibonacci DOES accept strings
-.    Expected undefined to equal 21..
-
-9 specs, 9 failures
-Finished in 0.008 seconds
+9 specs, 0 failures
+Finished in 0.11 seconds
 
 ```
 
@@ -277,19 +247,32 @@ Finished in 0.008 seconds
 
 <a name="getTheTitles"></a>
 
-## getTheTitles()
+## getTheTitles(books) ⇒ <code>object</code>
+This function gets the title from a collection of books
 
+
+**Returns**: <code>object</code> - the result is an array of titles  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| books | <code>object</code> | you find the titles from these book |
+
+**Example**  
+```js
+const testArr = [
+                   {title: 'Time waster', author: 'Sayed Kazimi'},
+                    {title: 'All about health', author: 'Aziz Haidari'}
+                ];
+    console.log(testArr[0].title); // ['Time waster', 'All about health']
+```
 **Test Report**
 ```
 Started
-.F.
+...
 
-Failures:
-1) getTheTitles gets titles
-.    Expected undefined to equal [ 'Book', 'Book2' ]..
 
-1 spec, 1 failure
-Finished in 0.001 seconds
+1 spec, 0 failures
+Finished in 0.031 seconds
 
 ```
 
@@ -329,7 +312,7 @@ Failures:
 .    Expected undefined to equal false..
 
 6 specs, 6 failures
-Finished in 0.005 seconds
+Finished in 0.078 seconds
 
 ```
 
@@ -366,7 +349,7 @@ Failures:
 .    Expected undefined to equal false..
 
 5 specs, 5 failures
-Finished in 0.005 seconds
+Finished in 0.078 seconds
 
 ```
 
@@ -409,7 +392,7 @@ Failures:
 .    Expected undefined to equal 'Ebiil, Tloia!'..
 
 7 specs, 7 failures
-Finished in 0.006 seconds
+Finished in 0.094 seconds
 
 ```
 
@@ -440,7 +423,7 @@ Failures:
 .    TypeError: Cannot read property 'name' of undefined.
 
 3 specs, 3 failures
-Finished in 0.003 seconds
+Finished in 0.062 seconds
 
 ```
 
@@ -489,7 +472,7 @@ Failures:
 .    Expected undefined to equal 'ethay ickquay ownbray oxfay'..
 
 9 specs, 9 failures
-Finished in 0.007 seconds
+Finished in 0.125 seconds
 
 ```
 
@@ -529,7 +512,7 @@ Failures:
 .    Expected undefined to equal 'snake_case_is_awesome'..
 
 6 specs, 6 failures
-Finished in 0.005 seconds
+Finished in 0.078 seconds
 
 ```
 
