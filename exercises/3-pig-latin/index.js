@@ -1,9 +1,9 @@
 /**
  *
  */
-const translate = () => {
 
-};
+
+const translate = (str) => {
 
 
 module.exports = translate;
